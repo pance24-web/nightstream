@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NightStream | Streaming Video Dewasa</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">Night<span>Stream</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Beranda</a></li>
+        <li><a href="pages/browse.html">Jelajahi</a></li>
+        <li><a href="pages/mylist.html">Daftar Saya</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Cari video..." />
+      </div>
+      <div class="user-menu">
+        <i class="fas fa-user-circle"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="badge">Hot</span>
+      <h1 id="heroTitle">Loading...</h1>
+      <p id="heroDesc">Loading...</p>
+      <div class="hero-meta">
+        <span id="heroDuration"><i class="fas fa-clock"></i> --</span>
+        <span id="heroViews"><i class="fas fa-eye"></i> --</span>
+        <span id="heroCategory"><i class="fas fa-tag"></i> --</span>
+      </div>
+      <div class="hero-actions">
+        <a href="#" class="btn btn-primary" id="heroPlay"><i class="fas fa-play"></i> Putar</a>
+        <button class="btn btn-secondary" id="heroAdd"><i class="fas fa-plus"></i> Daftar Saya</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Sections -->
+  <main class="container">
+    <!-- Trending -->
+    <section class="section">
+      <div class="section-header">
+        <h2><i class="fas fa-fire"></i> Trending Sekarang</h2>
+        <a href="pages/browse.html" class="see-all">Lihat Semua →</a>
+      </div>
+      <div class="video-grid" id="trendingGrid"></div>
+    </section>
+
+    <!-- Categories Preview -->
+    <section class="section">
+      <div class="section-header">
+        <h2><i class="fas fa-th-large"></i> Kategori Populer</h2>
+      </div>
+      <div class="category-grid" id="categoryGrid"></div>
+    </section>
+
+    <!-- New Releases -->
+    <section class="section">
+      <div class="section-header">
+        <h2><i class="fas fa-sparkles"></i> Baru Dirilis</h2>
+        <a href="pages/browse.html?sort=newest" class="see-all">Lihat Semua →</a>
+      </div>
+      <div class="video-grid" id="newestGrid"></div>
+    </section>
+
+    <!-- Recommended -->
+    <section class="section">
+      <div class="section-header">
+        <h2><i class="fas fa-heart"></i> Rekomendasi Untukmu</h2>
+      </div>
+      <div class="video-grid" id="recommendGrid"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Night<span>Stream</span></a>
+        <p>Platform streaming video dewasa terbaik. Konten khusus 18+.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Navigasi</h4>
+          <a href="index.html">Beranda</a>
+          <a href="pages/browse.html">Jelajahi</a>
+          <a href="pages/mylist.html">Daftar Saya</a>
+        </div>
+        <div>
+          <h4>Kategori</h4>
+          <a href="pages/browse.html?cat=amateur">Amateur</a>
+          <a href="pages/browse.html?cat=professional">Professional</a>
+          <a href="pages/browse.html?cat=asian">Asian</a>
+        </div>
+        <div>
+          <h4>Info</h4>
+          <a href="#">Syarat & Ketentuan</a>
+          <a href="#">Kebijakan Privasi</a>
+          <a href="#">Hubungi Kami</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 NightStream. Semua hak dilindungi. Hanya untuk usia 18+.</p>
+    </div>
+  </footer>
+
+  <script src="data/videos.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initHomePage();
+    });
+  </script>
+</body>
+</html>
