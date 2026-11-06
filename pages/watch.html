@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tonton | NightStream</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <nav class="navbar scrolled">
+    <div class="nav-left">
+      <a href="../index.html" class="logo">Night<span>Stream</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Beranda</a></li>
+        <li><a href="browse.html">Jelajahi</a></li>
+        <li><a href="mylist.html">Daftar Saya</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Cari video..." />
+      </div>
+      <div class="user-menu">
+        <i class="fas fa-user-circle"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div id="watchContent" class="watch-container">
+    <div class="main-player">
+      <div class="player-wrapper" id="playerArea">
+        <!-- player / placeholder -->
+      </div>
+
+      <div class="video-details">
+        <h1 id="watchTitle">Loading...</h1>
+        
+        <div class="video-stats">
+          <span><i class="fas fa-eye"></i> <span id="watchViews">--</span></span>
+          <span><i class="fas fa-clock"></i> <span id="watchDuration">--</span></span>
+          <span><i class="fas fa-tag"></i> <span id="watchCategory">--</span></span>
+          <span><i class="fas fa-star"></i> <span id="watchRating">--</span></span>
+        </div>
+
+        <div class="video-actions">
+          <button class="btn btn-primary" onclick="showToast('Fitur like hanya demo', 'fa-thumbs-up')">
+            <i class="fas fa-thumbs-up"></i> Suka
+          </button>
+          <button class="btn btn-secondary" id="watchAddBtn">
+            <i class="fas fa-plus"></i> Daftar Saya
+          </button>
+          <button class="btn btn-outline" onclick="showToast('Link disalin (demo)', 'fa-share')">
+            <i class="fas fa-share"></i> Bagikan
+          </button>
+        </div>
+
+        <div class="video-description">
+          <p id="watchDesc">Loading...</p>
+          <p style="margin-top:0.8rem;font-size:0.85rem;color:var(--text-muted)" id="watchDate"></p>
+          <div id="watchTags" style="margin-top:0.8rem"></div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="related-videos">
+      <h3>Video Terkait</h3>
+      <div class="related-list" id="relatedList">
+        <!-- populated by JS -->
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>© 2026 NightStream. Hanya untuk usia 18+.</p>
+    </div>
+  </footer>
+
+  <script src="../data/videos.js"></script>
+  <script src="../js/components.js"></script>
+  <script src="../js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', initWatchPage);
+  </script>
+</body>
+</html>
