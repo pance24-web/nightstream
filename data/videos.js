@@ -1,35 +1,14 @@
-// Dummy data - Video streaming dewasa (placeholder)
 const VIDEOS = [
-  {id:1,title:"Passionate Night Session",description:"Intense romantic encounter with beautiful lighting and chemistry.",category:"professional",duration:"24:15",views:"1.2M",rating:4.8,quality:"4K",thumbnail:"https://picsum.photos/seed/vid1/640/360",videoUrl:"",tags:["romantic","couple","intense"],uploadDate:"2026-10-15"},
-  {id:2,title:"Amateur Homemade Fun",description:"Real couple sharing their private moments. Authentic chemistry.",category:"amateur",duration:"18:42",views:"890K",rating:4.6,quality:"1080p",thumbnail:"https://picsum.photos/seed/vid2/640/360",videoUrl:"",tags:["amateur","homemade","couple"],uploadDate:"2026-10-28"},
-  {id:3,title:"Asian Beauty Solo",description:"Stunning Asian model in a sensual solo performance.",category:"asian",duration:"15:30",views:"2.1M",rating:4.9,quality:"4K",thumbnail:"https://picsum.photos/seed/vid3/640/360",videoUrl:"",tags:["asian","solo","sensual"],uploadDate:"2026-09-20"},
-  {id:4,title:"Office After Hours",description:"Workplace fantasy fulfilled. Professional setting turns steamy.",category:"professional",duration:"32:10",views:"1.5M",rating:4.7,quality:"1080p",thumbnail:"https://picsum.photos/seed/vid4/640/360",videoUrl:"",tags:["office","roleplay","professional"],uploadDate:"2026-11-01"},
-  {id:5,title:"Lesbian Softcore Romance",description:"Intimate and emotional connection between two women.",category:"lesbian",duration:"27:45",views:"980K",rating:4.8,quality:"4K",thumbnail:"https://picsum.photos/seed/vid5/640/360",videoUrl:"",tags:["lesbian","softcore","romantic"],uploadDate:"2026-10-05"},
-  {id:6,title:"Outdoor Adventure",description:"Risky outdoor session in a secluded location.",category:"amateur",duration:"21:18",views:"1.8M",rating:4.5,quality:"1080p",thumbnail:"https://picsum.photos/seed/vid6/640/360",videoUrl:"",tags:["outdoor","amateur","public"],uploadDate:"2026-09-12"},
-  {id:7,title:"Luxury Hotel Suite",description:"High-end production in a luxury suite. Elegant and cinematic.",category:"professional",duration:"35:00",views:"3.2M",rating:4.9,quality:"4K",thumbnail:"https://picsum.photos/seed/vid7/640/360",videoUrl:"",tags:["luxury","hotel","premium"],uploadDate:"2026-08-30"},
-  {id:8,title:"First Time Together",description:"Nervous but excited first encounter. Sweet and genuine.",category:"amateur",duration:"16:55",views:"720K",rating:4.4,quality:"720p",thumbnail:"https://picsum.photos/seed/vid8/640/360",videoUrl:"",tags:["first-time","amateur","cute"],uploadDate:"2026-11-03"},
-  {id:9,title:"Japanese Style Massage",description:"Traditional style sensual massage that turns intense.",category:"asian",duration:"29:20",views:"2.4M",rating:4.8,quality:"4K",thumbnail:"https://picsum.photos/seed/vid9/640/360",videoUrl:"",tags:["asian","massage","sensual"],uploadDate:"2026-10-18"},
-  {id:10,title:"Threesome Fantasy",description:"Three people exploring boundaries. Energetic scene.",category:"professional",duration:"41:05",views:"4.1M",rating:4.7,quality:"4K",thumbnail:"https://picsum.photos/seed/vid10/640/360",videoUrl:"",tags:["threesome","group","fantasy"],uploadDate:"2026-09-05"},
-  {id:11,title:"Shower Steamy Session",description:"Wet and steamy shower scene with great chemistry.",category:"amateur",duration:"14:30",views:"1.1M",rating:4.6,quality:"1080p",thumbnail:"https://picsum.photos/seed/vid11/640/360",videoUrl:"",tags:["shower","wet","amateur"],uploadDate:"2026-10-22"},
-  {id:12,title:"Cosplay Night",description:"Popular characters come to life in adult cosplay.",category:"cosplay",duration:"26:40",views:"1.6M",rating:4.5,quality:"1080p",thumbnail:"https://picsum.photos/seed/vid12/640/360",videoUrl:"",tags:["cosplay","roleplay","costume"],uploadDate:"2026-11-02"},
-  {id:13,title:"Morning After Glow",description:"Soft morning light, lazy intimacy. Slow and sensual.",category:"professional",duration:"19:15",views:"650K",rating:4.7,quality:"4K",thumbnail:"https://picsum.photos/seed/vid13/640/360",videoUrl:"",tags:["morning","soft","intimate"],uploadDate:"2026-10-10"},
-  {id:14,title:"Gym After Workout",description:"Sweaty post-workout session in an empty gym.",category:"amateur",duration:"22:50",views:"1.3M",rating:4.6,quality:"1080p",thumbnail:"https://picsum.photos/seed/vid14/640/360",videoUrl:"",tags:["gym","fitness","athletic"],uploadDate:"2026-09-28"},
-  {id:15,title:"Vintage Classic Style",description:"Retro aesthetic with modern production values.",category:"professional",duration:"33:25",views:"890K",rating:4.8,quality:"1080p",thumbnail:"https://picsum.photos/seed/vid15/640/360",videoUrl:"",tags:["vintage","classic","elegant"],uploadDate:"2026-08-15"},
-  {id:16,title:"POV Intimate View",description:"First-person perspective that puts you in the moment.",category:"amateur",duration:"17:40",views:"2.7M",rating:4.5,quality:"1080p",thumbnail:"https://picsum.photos/seed/vid16/640/360",videoUrl:"",tags:["pov","immersive","intimate"],uploadDate:"2026-11-04"}
+  {id:1, title:"Passionate Night Session", desc:"Intense romantic encounter.", cat:"professional", dur:"24:15", views:"1.2M", thumb:"https://picsum.photos/seed/v1/480/270"},
+  {id:2, title:"Amateur Homemade Fun", desc:"Real couple private moments.", cat:"amateur", dur:"18:42", views:"890K", thumb:"https://picsum.photos/seed/v2/480/270"},
+  {id:3, title:"Asian Beauty Solo", desc:"Stunning solo performance.", cat:"asian", dur:"15:30", views:"2.1M", thumb:"https://picsum.photos/seed/v3/480/270"},
+  {id:4, title:"Office After Hours", desc:"Workplace fantasy fulfilled.", cat:"professional", dur:"32:10", views:"1.5M", thumb:"https://picsum.photos/seed/v4/480/270"},
+  {id:5, title:"Softcore Romance", desc:"Intimate emotional connection.", cat:"amateur", dur:"27:45", views:"980K", thumb:"https://picsum.photos/seed/v5/480/270"},
+  {id:6, title:"Outdoor Adventure", desc:"Risky outdoor session.", cat:"amateur", dur:"21:18", views:"1.8M", thumb:"https://picsum.photos/seed/v6/480/270"},
+  {id:7, title:"Luxury Hotel Suite", desc:"High-end elegant production.", cat:"professional", dur:"35:00", views:"3.2M", thumb:"https://picsum.photos/seed/v7/480/270"},
+  {id:8, title:"First Time Together", desc:"Sweet and genuine first encounter.", cat:"amateur", dur:"16:55", views:"720K", thumb:"https://picsum.photos/seed/v8/480/270"},
+  {id:9, title:"Japanese Style Massage", desc:"Sensual traditional massage.", cat:"asian", dur:"29:20", views:"2.4M", thumb:"https://picsum.photos/seed/v9/480/270"},
+  {id:10, title:"Threesome Fantasy", desc:"Energetic group scene.", cat:"professional", dur:"41:05", views:"4.1M", thumb:"https://picsum.photos/seed/v10/480/270"},
+  {id:11, title:"Shower Steamy", desc:"Wet steamy shower scene.", cat:"amateur", dur:"14:30", views:"1.1M", thumb:"https://picsum.photos/seed/v11/480/270"},
+  {id:12, title:"Cosplay Night", desc:"Fun adult cosplay scenario.", cat:"asian", dur:"26:40", views:"1.6M", thumb:"https://picsum.photos/seed/v12/480/270"},
 ];
-
-const CATEGORIES = [
-  { id: "all", name: "Semua", icon: "fa-globe" },
-  { id: "professional", name: "Professional", icon: "fa-star" },
-  { id: "amateur", name: "Amateur", icon: "fa-home" },
-  { id: "asian", name: "Asian", icon: "fa-heart" },
-  { id: "lesbian", name: "Lesbian", icon: "fa-venus-double" },
-  { id: "cosplay", name: "Cosplay", icon: "fa-mask" }
-];
-
-function getVideoById(id) { return VIDEOS.find(v => v.id === parseInt(id)); }
-function getVideosByCategory(cat) { if (!cat || cat === "all") return VIDEOS; return VIDEOS.filter(v => v.category === cat); }
-function getTrending() { return [...VIDEOS].sort((a, b) => { const aV = parseFloat(a.views) * (a.views.includes('M') ? 1e6 : 1e3); const bV = parseFloat(b.views) * (b.views.includes('M') ? 1e6 : 1e3); return bV - aV; }).slice(0, 8); }
-function getNewest() { return [...VIDEOS].sort((a, b) => new Date(b.uploadDate) - new Date(a.uploadDate)).slice(0, 8); }
-function getRecommended() { return [...VIDEOS].sort(() => Math.random() - 0.5).slice(0, 8); }
-function searchVideos(query) { const q = query.toLowerCase().trim(); if (!q) return VIDEOS; return VIDEOS.filter(v => v.title.toLowerCase().includes(q) || v.description.toLowerCase().includes(q) || v.tags.some(t => t.includes(q)) || v.category.includes(q)); }
