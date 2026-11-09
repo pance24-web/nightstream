@@ -1,19 +1,9 @@
-# NightVid — Simple Video Site (Vidoy style)
+# NightVid
 
-Situs streaming video sederhana, dark theme, pink accent, mirip gaya Vidoy.
+Situs video sederhana (tanpa login).
 
-## Fitur
-- Header minimal (logo + search)
-- Tab kategori sederhana
-- Grid thumbnail video
-- Modal player (klik card → buka)
-- Responsive
+- Header: logo + search
+- Grid video
+- Klik → modal player
 
-## Cara jalanin
-Buka `index.html` di browser, atau:
-```bash
-python -m http.server 8080
-```
-
-## Live
-https://pance24-web.github.io/nightstream/
+Buka `index.html` atau https://pance24-web.github.io/nightstream/
