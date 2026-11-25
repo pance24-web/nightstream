@@ -8,12 +8,14 @@ function render(list) {
     grid.innerHTML = '<div class="empty">Tidak ada video</div>';
     return;
   }
+
   grid.innerHTML = list.map(v => `
     <div class="card" data-id="${v.id}">
       <div class="thumb">
-        <img src="${v.thumb}" alt="" loading="lazy" onerror="this.src='https://via.placeholder.com/320x180/161616/ff2d55?text=Video'">
+        <img src="${v.thumb}" alt="" loading="lazy"
+          onerror="this.src='https://via.placeholder.com/320x180/161616/ff2d55?text=Video'">
         <span class="dur">${v.dur}</span>
-        ${v.embed ? '<span class="badge">Play</span>' : ''}
+        <span class="badge">Play</span>
       </div>
       <div class="card-body">
         <div class="card-title">${v.title}</div>
@@ -29,20 +31,14 @@ function render(list) {
 
 function open(id) {
   const v = VIDEOS.find(x => x.id === id);
-  if (!v) return;
+  if (!v || !v.embed) return;
 
   document.getElementById('modalTitle').textContent = v.title;
-  document.getElementById('modalMeta').textContent = v.views + ' · ' + v.dur + (v.cat ? ' · ' + v.cat : '');
+  document.getElementById('modalMeta').textContent =
+    [v.views, v.dur, v.cat].filter(Boolean).join(' · ');
 
-  if (v.embed) {
-    player.innerHTML = `<iframe src="${v.embed}" allowfullscreen allow="autoplay; fullscreen" frameborder="0"></iframe>`;
-  } else {
-    player.innerHTML = `
-      <div class="player-inner">
-        <i class="fas fa-play-circle"></i>
-        <p>Belum ada link video</p>
-      </div>`;
-  }
+  player.innerHTML =
+    `<iframe src="${v.embed}" allowfullscreen allow="autoplay; fullscreen; encrypted-media" frameborder="0" scrolling="no"></iframe>`;
 
   modal.classList.add('show');
   document.body.style.overflow = 'hidden';
@@ -51,13 +47,12 @@ function open(id) {
 function close() {
   modal.classList.remove('show');
   document.body.style.overflow = '';
-  player.innerHTML = ''; // stop video
+  player.innerHTML = '';
 }
 
 search.oninput = () => {
   const q = search.value.trim().toLowerCase();
-  const list = q ? VIDEOS.filter(v => v.title.toLowerCase().includes(q)) : VIDEOS;
-  render(list);
+  render(q ? VIDEOS.filter(v => v.title.toLowerCase().includes(q)) : VIDEOS);
 };
 
 document.getElementById('closeBtn').onclick = close;
